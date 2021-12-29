@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Certification extends Model
 {
     use HasFactory;
+
+    protected $fillable=[
+        'user_id',
+        'name',
+        'issued_by',
+        'time_of_issuance',
+    ];
+
 }

@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class JobForLater extends Model
 {
     use HasFactory;
+
+    protected $fillable=[
+        'user_id',
+        'job_id',
+    ];
+
 }

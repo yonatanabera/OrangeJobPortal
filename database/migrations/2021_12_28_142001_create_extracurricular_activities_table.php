@@ -19,7 +19,7 @@ class CreateExtracurricularActivitiesTable extends Migration
             $table->string('role');
             $table->string('organization');
             $table->timestamp('starting_date')->default(Date('y:m:d'));
-            $table->timestamp('end_date')->default(Date('y:m:d'));
+            $table->timestamp('ending_date')->default(Date('y:m:d'));
             $table->text('summary');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
