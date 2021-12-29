@@ -16,4 +16,9 @@ class Certification extends Model
         'time_of_issuance',
     ];
 
+    // Return to which user the certificate belongs to. 
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
 }

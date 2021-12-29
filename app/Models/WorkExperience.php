@@ -19,4 +19,9 @@ class WorkExperience extends Model
         'employment_type',
     ];
 
+    // Return to which user the work experience belongs to. 
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
 }

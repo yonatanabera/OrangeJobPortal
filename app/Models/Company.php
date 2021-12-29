@@ -19,4 +19,19 @@ class Company extends Model
         'subscription_plan',
     ];
 
+    // List of Jobs the company has posted. 
+    public function jobs(){
+        return $this->hasMany(Jobs::class, 'company_id');
+    }
+
+    // List of packages, the company has ever used. 
+    public function packages(){
+        return $this->belongsToMany(Package::class, 'company_packages', 'company_id', 'package_id');
+    }
+
+    // Company Owner
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
 }

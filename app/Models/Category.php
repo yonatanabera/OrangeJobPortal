@@ -13,4 +13,9 @@ class Category extends Model
         'name',
     ];
 
+    // List of jobs that are mentioned under that category. 
+    public function jobs(){
+        return $this->hasMany(Jobs::class, 'category_id');
+    }
+
 }

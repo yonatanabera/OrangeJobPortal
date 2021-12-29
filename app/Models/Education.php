@@ -20,4 +20,9 @@ class Education extends Model
         'description',
     ];
 
+    // Return to which user the education belongs to. 
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
 }

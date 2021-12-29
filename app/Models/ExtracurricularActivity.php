@@ -18,4 +18,9 @@ class ExtracurricularActivity extends Model
         'summary'
     ];
 
+    // Return to which user the extracurricular activity belongs to.
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
 }

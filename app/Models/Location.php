@@ -13,4 +13,9 @@ class Location extends Model
         'name',
     ];
 
+    // List of jobs, in some specific location.
+    public function jobs(){
+        return $this->hasMany(Jobs::class,'location_id');
+    }
+
 }

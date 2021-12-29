@@ -17,4 +17,13 @@ class Application extends Model
         
     ];
 
+    // saved for later Applicants, 
+    public function users(){
+        return $this->belongsToMany(User::class, 'applicant_for_laters', 'application_id', 'user_id');
+    }
+
+    public function jobs(){
+        return $this->belongsTo(Jobs::class, 'job_id');
+    }
+
 }

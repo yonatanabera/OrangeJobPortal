@@ -14,4 +14,9 @@ class Skill extends Model
         'name',
     ];
 
+    // Return to which user the skill belongs to. 
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
 }

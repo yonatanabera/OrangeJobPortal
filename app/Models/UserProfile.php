@@ -17,4 +17,9 @@ class UserProfile extends Model
         'about',
     ];
 
+    // Return to which user the user profile belongs to, 
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
 }

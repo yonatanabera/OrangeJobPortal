@@ -15,4 +15,9 @@ class LanguageSkill extends Model
         'proficiency_level',
     ];
 
+    // Return to which user, the language skill is for. 
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
 }

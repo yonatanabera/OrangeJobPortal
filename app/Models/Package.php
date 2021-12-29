@@ -15,5 +15,10 @@ class Package extends Model
         'duration',
         'description',
     ];
+
+    // List of companies with specific package
+    public function companies(){
+        return $this->belongsToMany(Company::class, 'company_packages', 'package_id', 'company_id');
+    }
     
 }
